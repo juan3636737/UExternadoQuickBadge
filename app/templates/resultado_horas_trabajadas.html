@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horas Trabajadas</title>
+  <style>
+    body {
+      background-color: #00522C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .aviso {
+      width: 400px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .aviso-titulo {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .aviso-contenido {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .no-horas {
+      background-color: #ffe6e6;
+    }
+
+    .no-horas-mensaje {
+      font-size: 18px;
+      color: #ff0000;
+    }
+
+    .boton-regresar {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="aviso {% if not horas_trabajadas %}no-horas{% endif %}">
+    <p class="aviso-titulo">Horas Trabajadas</p>
+    {% if horas_trabajadas %}
+      <p class="aviso-contenido">Horas trabajadas: {{ horas_trabajadas }}</p>
+    {% else %}
+      <p class="no-horas-mensaje">No se encontraron horas trabajadas para este profesor.</p>
+    {% endif %}
+    <a href="{% url 'index' %}" class="boton-regresar">Regresar al inicio</a>
+
+  </div>
+</body>
+</html>

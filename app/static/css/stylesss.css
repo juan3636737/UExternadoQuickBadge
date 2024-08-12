@@ -1,0 +1,542 @@
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+.centrar{
+    justify-items: center;
+}
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px; /* Posicionamos la flecha izquierda */
+}
+
+.next-btn {
+    right: 10px; /* Posicionamos la flecha derecha */
+}
+
+.personal-container {
+    position: relative; /* Establecemos la posición relativa */
+    display: flex;
+    flex-direction: row; /* Alineamos los elementos en fila */
+    align-items: center; /* Centramos verticalmente */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.personal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.personal-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.personal-item img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.personal-item h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.personal-item p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.personal-item p:first-child {
+    margin-top: 0;
+}
+
+
+
+
+
+.profesores-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.profesores-destacados {
+    list-style: none;
+    padding: 0;
+}
+
+.profesor-item {
+    margin-bottom: 20px;
+}
+
+.profesor-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.profesor-imagen {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.profesor-info {
+    flex-grow: 1;
+}
+
+.estrategias-list {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.estrategias-list li {
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Estilos para el contenedor del formulario */
+.consulta-container {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 50px auto; /* Centrar horizontalmente y agregar espacio superior */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título del formulario */
+.consulta-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas de los campos de formulario */
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada */
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+/* Estilos para el botón de submit */
+.consulta-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón de submit al pasar el ratón sobre él */
+.consulta-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+#logo img {
+    height: 30px;  /* Altura deseada para el logo */
+    width: auto;   /* Ancho automático */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.before-footer {
+    float: none
+}
+
+.before-footer .footer-logos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
+    -ms-grid-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto
+}
+
+.before-footer .footer-logos a {
+    justify-self: center
+}
+
+.before-footer .footer-logos a:hover img {
+    filter: grayscale(100%)
+}
+
+.before-footer .footer-logos a img {
+    transition: filter .3s ease-in
+}
+
+@media (max-width: 400px) {
+    .before-footer .footer-logos {
+        -ms-grid-columns:auto auto auto;
+        grid-template-columns: auto auto auto
+    }
+}
+
+footer.footer-general {
+    width: 100%;
+    height: auto;
+    background: #32464d;
+    background-size: cover;
+    border-bottom: 4px solid #4d7b19;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    padding-top: 40px;
+    background-position: center
+}
+
+footer.footer-general .logo img {
+    width: 68%
+}
+
+footer.footer-general a {
+    transition: color ease-in-out .3s,background ease-in-out .3s
+}
+
+footer.footer-general a:hover {
+    color: #78b92f
+}
+
+
+
+footer.footer-general .h4,footer.footer-general h4 {
+    font-size: 1.1875rem;
+    font-weight: 900;
+    text-transform: none;
+    margin: 5px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+footer.footer-general p {
+    font-size: 1.025rem;
+    line-height: 1.6875rem;
+    font-weight: 300
+}
+
+footer.footer-general p.disclaimer {
+    font-size: .75rem;
+    text-align: center
+}
+
+footer.footer-general .documentos {
+    border-top: 1px solid #4d7b19;
+    border-bottom: 1px solid #4d7b19;
+    padding: 10px 0;
+    margin-bottom: 10px!important
+}
+
+footer.footer-general nav:not(.vigilado-men),footer.footer-general section:not(.vigilado-men) {
+    margin-bottom: 28px
+}
+
+footer.footer-general nav ul,footer.footer-general section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+footer.footer-general nav ul li,footer.footer-general section ul li {
+    font-size: 1.025rem;
+    line-height: 1.4375rem;
+    margin-bottom: .4em;
+    font-weight: 300
+}
+
+footer.footer-general .columna04:nth-child(1) a:nth-child(3) {
+    color: #4d7b19;
+    font-size: 1.05em;
+    padding: 5px 0;
+    text-decoration: none;
+    border-top: 1px solid #4d7b19;
+    border-bottom: 1px solid #4d7b19
+}
+
+@media (max-width: 768px) and (min-width:400px) {
+    footer.footer-general .columna04:nth-child(1),footer.footer-general .columna04:nth-child(2) {
+        width:48%;
+        margin: 0 1%;
+        /* float: left;*/ 
+        overflow: hidden!important;
+        display: inline-block!important
+    }
+}
+
+footer.footer-general .columna04:nth-child(1) .contactenos ul span,footer.footer-general .columna04:nth-child(2) .contactenos ul span {
+    color: #78b92f
+}
+
+@media (max-width: 399px) and (min-width:50px) {
+    footer.footer-general .columna04:nth-child(1),footer.footer-general .columna04:nth-child(2) {
+        width:98%
+    }
+}
+
+footer.footer-general .columna04:nth-child(3) .icono {
+    background-color: #32464d
+}
+
+@media (max-width: 768px) and (min-width:400px) {
+    footer.footer-general .columna04:nth-child(3) {
+        clear:both;
+        float: none;
+        display: block;
+        width: 98%
+    }
+
+    footer.footer-general .columna04:nth-child(3) nav,footer.footer-general .columna04:nth-child(3) section {
+        width: 48%;
+        float: left;
+        display: block
+    }
+
+    footer.footer-general .columna04:nth-child(3) nav:nth-child(2),footer.footer-general .columna04:nth-child(3) section:nth-child(2) {
+        margin: 0 1% 0 2%
+    }
+}
+
+.safari footer p {
+    font-weight: 400
+}
+
+.safari footer ul li {
+    font-weight: 400
+}
+
+footer.footer-general .footer-blogs .columna04 section {
+    margin-bottom: 15px
+}
+
+@media (max-width: 3000px) and (min-width:600px) {
+    footer.footer-general .footer-blogs .columna04 {
+       /*  float:left;*/ 
+        display: inline-block;
+        overflow: hidden;
+        width: 31.33%;
+        margin: 0 1%;
+        min-height: 1px;
+        clear: none
+    }
+}
+
+@media (max-width: 599px) and (min-width:50px) {
+    footer.footer-general .footer-blogs .columna04 {
+        display:block;
+        width: 94%;
+        margin: 10px 3%;
+        overflow: hidden
+    }
+}
+
+@media (max-width: 599px) and (min-width:400px) {
+    footer.footer-general .footer-blogs .columna04 {
+        padding:0 13%
+    }
+}
+
+@media (max-width: 3000px) and (min-width:600px) {
+    footer.footer-general .footer-blogs .columna04:nth-child(2),footer.footer-general .footer-blogs .columna04:nth-child(3) {
+        margin-top:14px
+    }
+}
+
+@media (max-width: 768px) and (min-width:minimo) {
+    footer.footer-general .footer-blogs .columna04:nth-child(2),footer.footer-general .footer-blogs .columna04:nth-child(3) {
+        margin-top:10px
+    }
+}
+
+@media (max-width: 599px) and (min-width:50px) {
+    footer.footer-general .footer-blogs .columna04:nth-child(2),footer.footer-general .footer-blogs .columna04:nth-child(3) {
+        margin-top:30px
+    }
+}
+
+@media (max-width: 768px) and (min-width:400px) {
+    footer.footer-general .footer-blogs .columna04:nth-child(3) section {
+        width:100%;
+        display: block
+    }
+}
+
+footer.footer-general .footer-blogs .nombre-blog {
+    max-width: 258px;
+    width: 94%;
+    border-top: thin solid #fff;
+    margin-top: 10px;
+    padding-top: 10px
+}
+
+footer.footer-general .footer-blogs .logo img {
+    max-width: 256px;
+    width: 94%
+}
+
+@media (max-width: 768px) and (min-width:50px) {
+    footer.footer-general .footer-blogs h4 {
+        font-size:1.0625rem
+    }
+}
+
+footer.footer-general .footer-blogs ol ol {
+    padding-left: 20px
+}
+
+footer.footer-general .footer-blogs ol ul {
+    padding-left: 0
+}
+
+footer.footer-general .footer-blogs ul {
+    margin-top: 8px;
+    padding-left: 15px
+}
+
+footer.footer-general .footer-blogs ul li {
+    line-height: 18px;
+    margin-bottom: 9px
+}
+
+footer.footer-general .footer-blogs ul>li:before {
+    color: #78b92f;
+    font-size: .75rem;
+    content: "●";
+    position: relative;
+    left: -15px;
+    top: 5px;
+    width: 5px;
+    height: 5px;
+    display: block
+}
+
+footer.footer-general .footer-blogs ol>ol,footer.footer-general .footer-blogs ol>ul,footer.footer-general .footer-blogs ul>ol,footer.footer-general .footer-blogs ul>ul {
+    margin: 0
+}
+
+footer.footer-general .footer-blogs ol>ol li,footer.footer-general .footer-blogs ol>ul li,footer.footer-general .footer-blogs ul>ol li,footer.footer-general .footer-blogs ul>ul li {
+    padding: 2px 0
+}
+
+footer.footer-general .footer-blogs .columna04:nth-child(1) a:nth-child(3) {
+    color: inherit;
+    font-size: 1.8rem;
+    padding: inherit;
+    text-decoration: inherit;
+    border-top: inherit;
+    border-bottom: inherit
+}
+

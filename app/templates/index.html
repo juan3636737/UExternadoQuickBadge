@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOFO</title>
+    <link rel="stylesheet" href="{% static 'css/stylesss.css' %}">
+
+</head>
+
+<body>
+    <!--
+    <div class="centrar">
+        <h1>Equipo de trabajo</h1>
+        <div class="prev-btn">&lt;</div>--> <!-- Flecha de navegación izquierda -->
+        <!-- Flecha de navegación derecha -->
+        <!--
+        <div class="personal-container">
+
+            {% for item in personal_items %}
+            <div class="personal-item">
+                <img src="{{ item.foto.url }}" alt="{{ item.nombre }}">
+                <h2>{{ item.nombre }}</h2>
+                <p><strong>Cargo:</strong> {{ item.cargo }}</p>
+                <p><strong>Correo:</strong> {{ item.correo }}</p>
+                <p><strong>Descripción:</strong> {{ item.descripcion }}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+-->
+<!--
+    <div id="carousel" class="carousel">
+        <div class="carousel-inner">
+            {% for item in carrusel_items %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ item.foto.url }}" alt="{{ item.titulo }}">
+                <div class="carousel-caption">
+                    <h3>{{ item.titulo }}</h3>
+                    <p>{{ item.descripcion }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="next-btn">&gt;</div>
+
+
+    
+    <div class="profesores-container">
+        <h1>Profesores Destacados</h1>
+        <ul class="profesores-destacados">
+            {% for profesor_destacado in profesores_destacados %}
+            <li class="profesor-item">
+                <div class="profesor-card">
+                    <img class="profesor-imagen" src="{{ profesor_destacado.imagen.url }}"
+                        alt="{{ profesor_destacado.registro_horas.profesor.nombre }}">
+                    <div class="profesor-info">
+                        <strong>Nombre:</strong> {{ profesor_destacado.registro_horas.profesor.nombre }}<br>
+                        <strong>Apellido:</strong> {{ profesor_destacado.registro_horas.profesor.apellido }}<br>
+                        <strong>Documento de Identidad:</strong> {{ profesor_destacado.registro_horas.profesor.documento_identidad }}<br>
+                        <strong>Correo Electrónico:</strong> {{ profesor_destacado.registro_horas.profesor.correo_electronico }}<br>
+                        <strong>Facultad:</strong> {{ profesor_destacado.registro_horas.profesor.facultad.nombre }}<br>
+                        <strong>Dependencia:</strong> {{ profesor_destacado.registro_horas.profesor.dependencia.nombre }}<br>
+                        <strong>Departamento:</strong> {{ profesor_destacado.registro_horas.profesor.departamento.nombre }}<br>
+                        <strong>Estrategias de Capacitación:</strong>
+                        <ul class="estrategias-list">
+                            {% for estrategia in profesor_destacado.registro_horas.estrategias_capacitacion.all %}
+                            <li>{{ estrategia.nombre }}</li>
+                            {% endfor %}
+                        </ul>
+                        <strong>Horas Trabajadas:</strong> {{ profesor_destacado.registro_horas.horas_trabajadas }}<br>
+                        <strong>Fecha de Registro:</strong> {{ profesor_destacado.registro_horas.fecha_registro }}<br>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    -->
+
+
+    <h1>Iniciar sesión</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Entrar</button>
+    </form>
+
+
+    <div class="consulta-container">
+        <h1>Consulta de Horas Trabajadas</h1>
+        <form action="{% url 'consultar_horas_trabajadas' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="documento">Documento:</label>
+                <input type="text" id="documento" name="documento" required>
+            </div>
+            <button type="submit">Consultar</button>
+        </form>
+    </div>
+
+
+
+    
+   <footer class="footer-general">
+    <script>
+    jQuery(window).load(function() {
+        jQuery(window)
+        .scroll(); // We do this to trick the Lazyload plugin into thinking that it has to double check what images to load.
+    });
+    </script>
+    <div class="footer-blogs">
+        <div class="centrar">
+            <div class="columna04">
+                <a href="//www.uexternado.edu.co" target="_blank" class="logo">
+                    <img src="https://pattern-lab-externado-prod.web.app/images/logo-uec.svg" alt="Universidad Externado de Colombia">
+                </a>
+                <h4 class="nombre-blog">
+                    Comunidad Virtual Externadista
+                </h4>
+                <p>
+                    Tel: (571) 3537000, 3420288 y 3419900 <br>
+                    Calle 12 No. 1-17 Este. Bogotá, Colombia. <br>
+                    comunidad.virtual@uexternado.edu.co <br>
+                </p>
+                <section>
+                    <div class="redes-sociales">
+                    </div>
+                </section>
+            </div>
+            <div class="columna04">
+                <br>
+                <h4>Dirección de Innovación Educativa Digital</h4>
+                <ul class="lista">
+                    <li>
+                        <a href="/equipo-de-trabajo">¿Quiénes somos?</a>
+                    </li>
+                    <li>
+                        <a href="/nuestros-servicios">Nuestros servicios</a>
+                    </li>
+                    <li>
+                        <a href="/contactenos">Contáctenos</a>
+                    </li>
+                    <li>
+                        <a href="/nuestra-presencia-en-medios-de-comunicacion-y-otras-plataformas">Presencia en medios de comunicación y otras plataformas</a>
+                    </li>
+                    <li>
+                        <a href="https://micomunidadvirtual.uexternado.edu.co/wp-content/uploads/sites/43/2023/03/Terminos-y-Condiciones-de-Uso.pdf" target="_blank">Términos y Condiciones</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columna04">
+                <br>
+                <h4>Enlaces de interés</h4>
+                <ul class="lista">
+                    <li>
+                        <a href="micrositio/ruta_docente_digital/">Ruta Docente Digital</a>
+                    </li>
+                    <li>
+                        <a href="/educacion-continuada">Educación continuada</a>
+                    </li>
+                    <li>
+                        <a href="/programas-formales">Programas formales</a>
+                    </li>
+                    <li>
+                        <a href="/ex-mooc">Ex-MOOC</a>
+                    </li>
+                    <li>
+                        <a href="https://micomunidadvirtual.uexternado.edu.co/wp-content/uploads/sites/43/2019/06/guia_de_manejo_de_material_academico_en_mediosvirtuales.pdf" target="_blank">Guía de manejo de material académico en medios virtuales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="vigilado-men">
+            <h4><a href="#">VIGILADA MINEDUCACIÓN</a></h4>
+            <span>
+                Personería Jurídica: Resolución 92 de marzo 9 de 1926, expedida por el Ministerio de Gobierno
+            </span>
+        </div>
+    </div>
+</footer>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/script_personal.js' %}"></script>
+</body>
+
+</html>
